@@ -1,15 +1,15 @@
 // @flow
-import * as React from 'react';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 type Props = {
   children?: React.Node,
   tag: string,
-  size: 'body' | 'caption' | 'heading' | 'subheading'
+  size: "body" | "caption" | "heading" | "subheading"
 };
 
-const TextBase = styled(
-  ({ children, tag, ...props }) => React.createElement(tag, props, children)
+const TextBase = styled(({ children, tag, ...props }) =>
+  React.createElement(tag, props, children)
 )`
   font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-size: 100%;
@@ -37,26 +37,37 @@ const TextSubheading = styled(TextBase)`
 
 export default class Text extends React.Component<Props> {
   static defaultProps = {
-    size: 'body',
-    tag: 'div'
+    size: "body",
+    tag: "div"
   };
 
   render() {
-    const {
-      children,
-      size,
-      tag,
-      ...rest
-    } = this.props;
+    const { children, size, tag, ...rest } = this.props;
 
-    if (size === 'heading') {
-      return <TextHeading tag={tag} {...rest}>{children}</TextHeading>;
-    } else if (size === 'subheading') {
-      return <TextSubheading tag={tag} {...rest}>{children}</TextSubheading>;
-    } else if (size === 'caption') {
-      return <TextCaption tag={tag} {...rest}>{children}</TextCaption>;
+    if (size === "heading") {
+      return (
+        <TextHeading tag={tag} {...rest}>
+          {children}
+        </TextHeading>
+      );
+    } else if (size === "subheading") {
+      return (
+        <TextSubheading tag={tag} {...rest}>
+          {children}
+        </TextSubheading>
+      );
+    } else if (size === "caption") {
+      return (
+        <TextCaption tag={tag} {...rest}>
+          {children}
+        </TextCaption>
+      );
     }
 
-    return <TextBody tag={tag} {...rest}>{children}</TextBody>;
+    return (
+      <TextBody tag={tag} {...rest}>
+        {children}
+      </TextBody>
+    );
   }
 }
