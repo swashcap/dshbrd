@@ -11,6 +11,7 @@
   "scripts": {
     "flow": "flow",
     "kit": "kit examples",
+    "prettier": "prettier --write '{example,src}/**/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@compositor/kit": "^1.0.47",
     "@compositor/kit-cli": "^1.0.47",
-    "flow-bin": "^0.82.0"
+    "flow-bin": "^0.82.0",
+    "prettier": "1.14.3"
   }
 }
