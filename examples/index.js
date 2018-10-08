@@ -3,6 +3,7 @@ import * as React from "react";
 import { Example, Library } from "@compositor/kit";
 
 import Button from "./Button";
+import Navigation from "./Navigation";
 import Text from "./Text";
 
 export default (props: {}) => (
@@ -12,6 +13,9 @@ export default (props: {}) => (
     </Example>
     <Example name="Button">
       <Button />
+    </Example>
+    <Example name="Navigation">
+      <Navigation />
     </Example>
   </Library>
 );
