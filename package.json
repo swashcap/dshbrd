@@ -15,6 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,13 +32,19 @@
     "@commitlint/config-conventional": "^7.1.2",
     "@compositor/kit": "^1.0.47",
     "@compositor/kit-cli": "^1.0.47",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
     "flow-bin": "^0.82.0",
     "husky": "^1.1.1",
-    "prettier": "1.14.3"
+    "jest-enzyme": "^6.1.2",
+    "jest-styled-components": "^6.2.1",
+    "prettier": "1.14.3",
+    "react-test-renderer": "^16.5.2"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run prettier && git add examples src && npm run flow && CI=true npm run test"
     }
   }
 }

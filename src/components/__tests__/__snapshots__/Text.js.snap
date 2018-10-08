@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  font-family: "Avenir Next","Helvetica Neue",Arial,sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+<div
+  className="c0"
+>
+  Sample text
+</div>
+`;
