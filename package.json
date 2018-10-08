@@ -11,7 +11,7 @@
   "scripts": {
     "flow": "flow",
     "kit": "kit examples",
-    "prettier": "prettier --write '{example,src}/**/*.js'",
+    "prettier": "prettier --write '{examples,src}/**/*.js'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

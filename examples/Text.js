@@ -1,16 +1,15 @@
 // @flow
-import * as React from 'react'
-import { Cartesian } from '@compositor/kit'
+import * as React from "react";
+import { Cartesian } from "@compositor/kit";
 
-import Text from '../src/components/Text'
+import Text from "../src/components/Text";
 
-export default function (props: {}) {
+export default function(props: {}) {
   return (
     <Cartesian
-      children='Sample text'
+      children="Sample text"
       component={Text}
-      size={['heading', 'subheading', 'body', 'caption']}
+      size={["heading", "subheading", "body", "caption"]}
     />
   );
 }
-
