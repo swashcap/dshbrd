@@ -62,8 +62,14 @@ export default class Navigation extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
+    let activeIndex = 0;
+
+    if (typeof props.initialIndex === "number") {
+      activeIndex = props.initialIndex;
+    }
+
     this.state = {
-      activeIndex: props.initialIndex ? props.initialIndex : 0
+      activeIndex
     };
   }
 

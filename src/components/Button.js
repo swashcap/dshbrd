@@ -4,7 +4,7 @@ import styled, { type ReactComponentStyled } from "styled-components";
 
 type Props = {
   children: React.Node,
-  onPress?: (event: any) => void
+  onPress?: (event: SyntheticEvent<HTMLButtonElement>) => void
 };
 
 const Button: ReactComponentStyled<Props> = styled(
