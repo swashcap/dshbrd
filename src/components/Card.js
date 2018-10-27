@@ -5,16 +5,40 @@ import styled from "styled-components";
 import { getHostname } from "../utils";
 import Text from "./Text";
 
+const CardWrapper = styled.article`
+  overflow: hidden;
+`;
+
 const CardAnchor = styled.a`
   color: inherit;
-  display: block;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
   text-decoration: none;
 `;
 
-const CardImage = styled.img`
-  height: auto;
+const CardContent = styled.div`
+  align-items: center;
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  flex: 2 2;
   margin-bottom: 0.5rem;
-  width: 100%;
+  overflow: hidden;
+
+  > * {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  /*
+  > * {
+    height: auto;
+    max-width: 100%;
+  }
+*/
 `;
 
 const CardText = styled(Text)`
@@ -23,19 +47,19 @@ const CardText = styled(Text)`
 `;
 
 type Props = {
+  children?: React.Node,
   href: string,
-  imageUri: string,
   title: string
 };
 
-const Card = ({ href, imageUri, title }: Props) => (
-  <article>
+const Card = ({ children, href, title }: Props) => (
+  <CardWrapper>
     <CardAnchor href={href}>
-      <CardImage src={imageUri} />
+      <CardContent>{children}</CardContent>
       <CardText>{title}</CardText>
       <CardText size="caption">{getHostname(href)}</CardText>
     </CardAnchor>
-  </article>
+  </CardWrapper>
 );
 
 export default Card;
