@@ -45,7 +45,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run prettier && git add examples src && npm run flow && CI=true npm run test"
+      "pre-commit": "npm run prettier && npm run flow && CI=true npm run test"
     }
   }
 }
