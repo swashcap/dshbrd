@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c1 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.c0 {
+  cursor: pointer;
+  display: block;
+  padding: 1em 0.667em;
+}
+
+.c0:focus::before,
+.c0:hover::before {
+  background: rgba(0,0,0,0.1);
+}
+
+.c0:active::before {
+  background: rgba(0,0,0,0.2);
+}
+
+.c0::before {
+  background: transparent;
+  border-color: rgba(0,0,0,0.5);
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 1px;
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  line-height: 1;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  duration-property: background border-color;
+  vertical-align: middle;
+  width: 0.5em;
+}
+
+.c0.active:focus::before,
+.c0.active:hover::before {
+  background: black;
+}
+
+.c0.active:active::before {
+  background: black;
+}
+
+.c0.active::before {
+  background: black;
+  border-color: black;
+}
+
+<a
+  aria-current="page"
+  className="c0 active"
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
+>
+  <span
+    className="c1"
+  >
+    Home
+  </span>
+</a>
+`;
